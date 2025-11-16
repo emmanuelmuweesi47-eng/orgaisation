@@ -1,3 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berbra Hill Secondary School – we study to fight ignorance</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Use Inter font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-padding {
+            padding: 4rem 1.5rem; /* 64px vertical padding */
+        }
+        .nav-link:hover {
+            color: #fcd34d; /* Amber-300 for hover */
+            border-bottom-color: #fcd34d;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-indigo': '#3730a3', /* Indigo-700 */
+                        'secondary-gold': '#f59e0b', /* Amber-500 */
+                        'indigo-dark': '#1e1b4b', /* Indigo-900 */
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-indigo-dark shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo/Branding -->
+                <div class="flex items-center">
+                    <i data-lucide="graduation-cap" class="w-7 h-7 text-secondary-gold fill-secondary-gold mr-2"></i>
+                    <span class="text-xl font-bold text-white tracking-wide">BERBRA HILL SECONDARY SCHOOL</span>
+                </div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#home" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white transition duration-200">Home</a>
+                    <a href="#academics" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white transition duration-200">Academics</a>
+                    <a href="#admissions" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white transition duration-200">Admissions</a>
+                    <a href="#contact" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-white transition duration-200">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="sm:hidden flex items-center">
+                    <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-indigo-200 hover:text-white hover:bg-primary-indigo focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1 bg-indigo-800">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:bg-indigo-700 transition duration-150">Home</a>
+                <a href="#academics" class="block px-3 py-2 text-base font-medium text-white hover:bg-indigo-700 transition duration-150">Academics</a>
+                <a href="#admissions" class="block px-3 py-2 text-base font-medium text-white hover:bg-indigo-700 transition duration-150">Admissions</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:bg-indigo-700 transition duration-150">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative section-padding bg-primary-indigo text-white overflow-hidden">
+        <!-- Background Shape -->
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(circle at 100% 0, rgba(255, 255, 255, 0.2) 1px, transparent 1px);"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <p class="text-secondary-gold text-lg font-semibold mb-2">Welcome to Berbra Hill</p>
+                <h2 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                    Excellence in <span class="text-secondary-gold">Secondary</span> Education
+                </h2>
+                <p class="mt-4 text-xl text-indigo-200">
+                    Nurturing future leaders through holistic development, critical thinking, and a commitment to global citizenship.
+                </p>
+                <a href="#admissions" class="mt-8 inline-block bg-secondary-gold text-indigo-dark font-bold py-3 px-8 rounded-lg shadow-xl hover:bg-amber-400 transition duration-300 transform hover:scale-[1.02]">
+                    Apply Now
+                </a>
+            </div>
+            
+            <!-- Placeholder Image (Book/Future) -->
+            <div class="md:w-1/2 flex justify-center">
+                <svg class="w-64 h-64 md:w-80 md:h-80 text-secondary-gold opacity-80" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-primary-indigo mb-12 border-b-4 border-secondary-gold inline-block pb-2">Our Programs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Core Curriculum -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-indigo">
+                    <i data-lucide="book-open-text" class="w-8 h-8 text-primary-indigo mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Core Curriculum</h3>
+                    <p class="text-gray-600">A rigorous curriculum covering Sciences, Humanities, Mathematics, and Languages, designed to prepare students for top universities worldwide.</p>
+                </div>
+                
+                <!-- Card 2: Extracurricular -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-indigo">
+                    <i data-lucide="zap" class="w-8 h-8 text-secondary-gold mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Innovation & STEM</h3>
+                    <p class="text-gray-600">Dedicated labs and project-based learning focused on Science, Technology, Engineering, and Mathematics (STEM) excellence.</p>
+                </div>
+                
+                <!-- Card 3: Arts & Athletics -->
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-indigo">
+                    <i data-lucide="palette" class="w-8 h-8 text-primary-indigo mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Arts & Sports</h3>
+                    <p class="text-gray-600">A vibrant program including competitive athletics, visual arts, music, and drama to ensure well-rounded development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Admissions Section -->
+    <section id="admissions" class="section-padding bg-gray-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-primary-indigo mb-4">JOIN THE BERBRA HILL COMMUNITY</h2>
+            <p class="text-xl text-gray-600 mb-12">Admissions are open for the upcoming academic year. Discover our process below.</p>
+
+            <div class="flex flex-wrap justify-center space-y-6 md:space-y-0 md:space-x-8">
+                <!-- Step 1 -->
+                <div class="w-full md:w-56 p-6 bg-white rounded-lg shadow-xl border-b-4 border-secondary-gold">
+                    <span class="text-4xl font-extrabold text-secondary-gold block mb-2">1</span>
+                    <h4 class="text-xl font-semibold mb-2">INQUIRY</h4>
+                    <p class="text-sm text-gray-500">Submit an online inquiry form to receive our detailed prospectus.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="w-full md:w-56 p-6 bg-white rounded-lg shadow-xl border-b-4 border-secondary-gold">
+                    <span class="text-4xl font-extrabold text-secondary-gold block mb-2">2</span>
+                    <h4 class="text-xl font-semibold mb-2">ASSESSMENT</h4>
+                    <p class="text-sm text-gray-500">Schedule entrance examination and interview for the student and parents.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="w-full md:w-56 p-6 bg-white rounded-lg shadow-xl border-b-4 border-secondary-gold">
+                    <span class="text-4xl font-extrabold text-secondary-gold block mb-2">3</span>
+                    <h4 class="text-xl font-semibold mb-2">Enrollment</h4>
+                    <p class="text-sm text-gray-500">Upon acceptance, complete registration and payment formalities.</p>
+                </div>
+            </div>
+
+            <a href="#" class="mt-12 inline-flex items-center space-x-2 bg-primary-indigo text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg">
+                <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+                <span>Download Application Form</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-primary-indigo mb-12 border-b-4 border-secondary-gold inline-block pb-2">Get In Touch</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-6 text-lg">
+                    <div class="flex items-center space-x-4">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-secondary-gold"></i>
+                        <p>1400 Berbra Hill Drive, Busiika-zirobwe road, State X, twitter, Facebook, instagram, </p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-lucide="phone" class="w-6 h-6 text-secondary-gold"></i>
+                        <p>TELL:</p><P>+256706271490</P>
+                                 <P>+256747463562</P>
+                            <P>+256760992117</P>
+                        
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-lucide="mail" class="w-6 h-6 text-secondary-gold"></i>
+                        <p>admissions@berbrahill.edu</p>
+                    </div>
+                    <div class="border-l-4 border-primary-indigo pl-4 pt-4 mt-8">
+                        <p class="font-semibold text-gray-700">Office Hours:</p>
+                        <p class="text-sm text-gray-500">Monday - Saturday, 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form Placeholder -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-inner">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary-indigo">Send Us a Message</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-indigo focus:border-primary-indigo">
+                        <input type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-indigo focus:border-primary-indigo">
+                        <textarea placeholder="Your Message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-primary-indigo focus:border-primary-indigo"></textarea>
+                        <button type="submit" class="w-full bg-secondary-gold text-indigo-dark font-bold py-3 rounded-lg hover:bg-amber-400 transition duration-300">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-dark text-white p-8">
+        <div class="max-w-7xl mx-auto text-center text-sm">
+            <p>&copy; <span id="year"></span> Berbra Hill Secondary School. All rights reserved. | <a href="#" class="text-secondary-gold hover:underline">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Footer Year -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            const isExpanded = menu.classList.contains('hidden');
+            if (isExpanded) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
